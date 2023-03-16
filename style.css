@@ -1,0 +1,444 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.landing-page {
+    background-image: url('images/landing.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    background-position-y: -50px;
+}
+.landing-page::after {
+    content:'';
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    min-height: 80vh;
+    padding: 3rem;
+}
+.landing-page > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    z-index: 999;
+}
+.navbar i {
+    padding-left: 40px;
+    padding-top: 12px;
+    font-size: 35px;
+}
+.navbar i span{
+    font-family: 'Damion', cursive;
+    padding-left: 20px;
+    font-size: 30px;
+}
+.navbar ul {
+    position: relative;
+    display: flex;
+    list-style: none;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+.navbar ul li{
+    position: relative;
+}
+.navbar ul li:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.navbar ul li a{
+    position: relative;
+    line-height: 60px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #00FFFF;
+}
+#check {
+    display: none;
+    }
+.navbar-bars {
+    display: none;
+}
+.title {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    z-index: 1;
+}
+.title .skypics {
+    font-family: 'Damion', cursive;
+    font-size: 64px;
+}
+.title .title-desc {
+    margin-top: -30px;
+    color: #D9D9D9;
+}
+.angle-down {
+    font-size: 60px;
+    margin-top: 80px;
+    z-index: 1;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.angle-down i {
+    color: white;
+}
+.about-us {
+    background-image: url('images/aboutus.jpg');
+    background-size: cover;
+    transform: rotate(180deg);
+    min-height: 100vh;
+    padding: 3rem;
+    /* background-position-y: -160px; */
+}
+.about-us::after {
+    content:'';
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    min-height: 80vh;
+    padding: 3rem;
+    z-index: -1;
+}
+.about-us > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    transform: rotate(180deg);
+    margin-top: 100px;
+}
+.about-us .container h1 {
+    z-index: 1;
+    margin-bottom: -30px;
+}
+.camera-logo {
+    z-index: 1;
+    color: #D9D9D9;
+    font-size: 200px;
+}
+.about-us-desc {
+    z-index: 1;
+    max-width: 80%;
+    text-align: center;
+}
+.about-us-desc h1 {
+    font-size: 20px;
+}
+.our-work {
+    background-color: rgba(0, 0, 0, 0.35);
+    min-height: 100vh;
+    padding: 3rem;
+}
+.our-work > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.image-container {
+    display: flex;
+    justify-content: space-around;
+}
+.inner-image-container {
+    width: 30%;
+}
+.inner-image-container  > img {
+    width: 100%;
+}
+.inner-image {
+    width: 30%;
+}
+.image-pipih {
+    min-height: 150px;
+    height: 47%;
+    margin-bottom: 20px;
+    background-image: url('images/2.jpg');
+    background-size: cover;
+    background-position-x: -10px;
+}
+.image-pipih2 {
+    min-height: 150px;
+    height: 47%;
+    background-image: url('images/3.jpg');
+    background-size: cover;
+    transform: rotate(180deg);
+    background-position-x: -20px;
+}
+.contact-us {
+    background-image: url('images/contactus.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    padding: 3rem;
+}
+.contact-us > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.form-container {
+    background-color:#C4C4C4;
+    padding: 30px;
+    border-radius: 20px;
+}
+.form-control input {
+    border: 2px solid;
+}
+.form-control textarea {
+    border: 2px solid;
+}
+.form-control.success input {
+    border-color: #2ECC71;
+}
+.form-control.success textarea {
+    border-color: #2ECC71;
+}
+.form-control.error input {
+    border-color: #E74C3C;
+}
+.form-control.error textarea {
+    border-color: #E74C3C;
+}
+.form-control small {
+    visibility: hidden;
+}
+.form-control.error small {
+    color: #E74C3C;
+    visibility: visible;
+}
+.fname {
+    width: 50%;
+    font-size: 16px;
+    padding-left: 8px;
+}
+.lname {
+    width: 49.2%;
+    font-size: 16px;
+    padding-left: 8px;
+}
+.email {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 8px;
+}
+.phone {
+    width: 50%;
+    font-size: 16px;
+    padding-left: 8px;
+}
+.gender {
+    width: 49%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.gender .female {
+    margin-left: 40px;
+}
+.messagess {
+    width: 100%;
+    resize: none;
+    overflow: auto;
+    font-size: 16px;
+    padding-left: 8px;
+}
+.submit {
+    border-radius: 20px;
+    padding: 5px 50px;
+}
+.submit:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+::placeholder {
+    font-size: 16px;
+    margin-left: 20px;
+}
+.footer {
+    background-color: black;
+    color: white;
+}
+.left {
+    padding-left: 150px;
+}
+.left-title i {
+    padding-top: 12px;
+    font-size: 40px;
+}
+.left-title i span{
+    font-family: 'Damion', cursive;
+    padding-left: 20px;
+    font-size: 40px;
+}
+.right  {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -70px;
+    padding-right: 230px;
+}
+.sosmed {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 185px;
+    font-size: 30px;
+}
+.sosmed a {
+    color: white;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+h1 {
+    color: white;
+    margin-bottom: 30px;
+}
+h2{
+    color: white;
+}
+@media only screen and (max-width :600px){
+    .landing-page {
+    background-position-y: 0;
+    }
+    .navbar i span {
+        visibility: hidden;
+    }
+    .navbar ul {
+        width: 100%;
+        height: 40vh;
+        position: absolute;
+        top: -400px;
+        text-align: center;
+        z-index: 2;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.15);
+        transition: all .5s;
+    }
+    .navbar ul li {
+        padding-left: 30px;
+    }
+    #check:checked ~ #menuList {
+        top: 49px;
+    }
+    .navbar-bars {
+        display: block;
+        padding-right: 40px;
+        cursor: pointer;
+    }
+    .title {
+        margin-top: 200px;
+    }  
+    .about-us {
+        background-position-y: 0;
+    }
+    .about-us .container {
+        margin-top: 100px;
+    }
+    .image-container {
+        flex-direction: column;
+    }
+    .inner-image {
+        width: 100%;
+    }
+    .inner-image-container {
+        width: 100%;
+    }
+    .fname {
+    width: 50%;
+    font-size: 16px;
+    padding-left: 8px;
+}
+    .lname {
+    width: 49.1%;
+    font-size: 16px;
+    padding-left: 8px;
+}
+    .left {
+    padding-left: 80px;
+}
+    .left-title i {
+    padding-top: 12px;
+    font-size: 35px;
+}
+    .left-title i span{
+    font-family: 'Damion', cursive;
+    padding-left: 20px;
+    font-size: 35px;
+}
+    .right  {
+    padding-right: 130px;
+}
+    .sosmed {
+    padding-right: 83px;
+    font-size: 30px;
+}
+}
+
+@media only screen and (max-width :545px){
+    .fname {
+    width: 49%;
+}
+    .lname {
+    width: 49%;
+    }
+    .phone {
+    width: 49%;
+}
+.gender {
+    font-size: 14px;
+}
+.gender .female {
+    margin-left: 1px;
+}
+.left {
+    padding-left: 20px;
+}
+.right  {
+    display: block;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.sosmed {
+    display: block;
+    padding-left: 20px;
+    font-size: 30px;
+}
+}
